@@ -7,9 +7,9 @@ bot.on("ready", () => {
 });
 
 bot.on("message", (msg)=>  {
-    const palavrar_proibida = ["ayato", "exposed", "equisposed", "aiato"]
+    const palavra = ["ayato", "exposed", "equisposed", "aiato"]
     for(let i = 0; i = palavrar_proibida.length; i++){
-        if(msg.content.includes(removemd(palavrar_proibida[i]))){
+        if(msg.content.includes(removemd(palavra[i]))){
             msg.delete()
             msg.channel.send(`${msg.author} n fala isso kraio`)
         }
